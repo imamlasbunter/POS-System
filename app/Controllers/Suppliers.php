@@ -53,20 +53,20 @@ class Suppliers extends BaseController
 			'supplier_name' => [
 				'rules' => 'required',
 				'errors' => [
-					'required' => 'Supplier Name must be filled.'
+					'required' => 'Please provide a supplier name.'
 				]
 			],
 			'no_telp' => [
 				'rules' => 'required|numeric',
 				'errors' => [
-					'required' => 'No. Telephone must be filled.',
+					'required' => 'Please provide a telephone number.',
 					'numeric' => 'No. Telephone must be filled with numbers.'
 				]
 			],
 			'address' => [
 				'rules' => 'required',
 				'errors' => [
-					'required' => 'Address must be filled.'
+					'required' => 'Please provide address detail.'
 				]
 
 			]
@@ -112,20 +112,20 @@ class Suppliers extends BaseController
 			'supplier_name' => [
 				'rules' => 'required',
 				'errors' => [
-					'required' => 'Supplier Name must be filled.'
+					'required' => 'Please provide a supplier name.'
 				]
 			],
 			'no_telp' => [
 				'rules' => 'required|numeric',
 				'errors' => [
-					'required' => 'No. Telephone must be filled.',
+					'required' => 'Please provide a telephone number.',
 					'numeric' => 'No. Telephone must be filled with numbers.'
 				]
 			],
 			'address' => [
 				'rules' => 'required',
 				'errors' => [
-					'required' => 'Address must be filled.'
+					'required' => 'Please provide address detail.'
 				]
 
 			]

@@ -12,7 +12,10 @@ class SupplierModel extends Model
 		'supplier_name',
 		'no_telp',
 		'address',
-		'user_create'
+		'user_create',
+		'user_update',
+		'user_delete'
+
 	];
 	protected $returnType = 'array';
 

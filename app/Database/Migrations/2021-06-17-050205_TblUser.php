@@ -26,6 +26,10 @@ class TblUser extends Migration
 				'type' => 'VARCHAR',
 				'constraint' => '250'
 			],
+			'email' => [
+				'type' => 'VARCHAR',
+				'constraint' => '100',
+			],
 			'level' => [
 				'type' => 'BIGINT',
 			],

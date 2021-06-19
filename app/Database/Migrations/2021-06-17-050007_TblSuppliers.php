@@ -22,6 +22,14 @@ class TblSuppliers extends Migration
 				'type' => 'VARCHAR',
 				'constraint' => '20',
 			],
+			'email' => [
+				'type' => 'VARCHAR',
+				'constraint' => '100',
+			],
+			'npwp' => [
+				'type' => 'VARCHAR',
+				'constraint' => '50',
+			],
 			'address' => [
 				'type' => 'VARCHAR',
 				'constraint' => '500',

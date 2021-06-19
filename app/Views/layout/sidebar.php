@@ -33,7 +33,7 @@
              </p>
            </a>
          </li>
-         <li class="nav-item has-treeview menu-open">
+         <li class="nav-item has-treeview">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-shopping-cart"></i>
              <p>
@@ -62,48 +62,6 @@
              </li>
            </ul>
          </li>
-         <li class="nav-header">DATA MASTER</li>
-         <li class="nav-item">
-           <a href="<?= base_url('suppliers'); ?>" class="nav-link  <?= ($title == "Suppliers" || $title == "Add|Suppliers" || $title == "Edit|Suppliers") ? "active" : ""; ?>">
-             <i class="nav-icon fas fa-truck"></i>
-             <p>Suppliers</p>
-           </a>
-         </li>
-         <li class="nav-item">
-           <a href="<?= base_url('customers'); ?>" class="nav-link <?= ($title == "Customers" || $title == "Add|Customers" || $title == "Edit|Customers") ? "active" : ""; ?>">
-             <i class="nav-icon fas fa-users"></i>
-             <p>Customers</p>
-           </a>
-         </li>
-         <li class="nav-item has-treeview">
-           <a href="#" class="nav-link">
-             <i class="nav-icon fas fa-box"></i>
-             <p>
-               Product
-               <i class="right fas fa-angle-left"></i>
-             </p>
-           </a>
-           <ul class="nav nav-treeview">
-             <li class="nav-item">
-               <a href="#" class="nav-link">
-                 <i class="fas fa-list-ul nav-icon"></i>
-                 <p>Categories</p>
-               </a>
-             </li>
-             <li class="nav-item">
-               <a href="#" class="nav-link">
-                 <i class="fas fa-list-ul nav-icon"></i>
-                 <p>Units</p>
-               </a>
-             </li>
-             <li class="nav-item">
-               <a href="#" class="nav-link">
-                 <i class="fas fa-list-ul nav-icon"></i>
-                 <p>Items</p>
-               </a>
-             </li>
-           </ul>
-         </li>
          <li class="nav-header">REPORT</li>
          <li class="nav-item">
            <a href="#" class="nav-link">
@@ -123,6 +81,50 @@
              <p>Log</p>
            </a>
          </li>
+
+         <li class="nav-header">DATA MASTER</li>
+         <li class="nav-item">
+           <a href="<?= base_url('suppliers'); ?>" class="nav-link  <?= ($title == "Suppliers" || $title == "Add|Suppliers" || $title == "Edit|Suppliers") ? "active" : ""; ?>">
+             <i class="nav-icon fas fa-truck"></i>
+             <p>Suppliers</p>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a href="<?= base_url('customers'); ?>" class="nav-link <?= ($title == "Customers" || $title == "Add|Customers" || $title == "Edit|Customers") ? "active" : ""; ?>">
+             <i class="nav-icon fas fa-users"></i>
+             <p>Customers</p>
+           </a>
+         </li>
+         <li class="nav-item has-treeview <?= ($title == "Product Categories" || $title == "Add|Product Categories" || $title == "Edit|Product Categories" || $title == "Product Units" || $title == "Add|Product Units" || $title == "Edit|Product Units" || $title == "Product Items" || $title == "Add|Product Items" || $title == "Edit|Product Items") ? "menu-open" : ""; ?>">
+           <a href="#" class="nav-link">
+             <i class="nav-icon fas fa-box"></i>
+             <p>
+               Product
+               <i class="right fas fa-angle-left"></i>
+             </p>
+           </a>
+           <ul class="nav nav-treeview">
+             <li class="nav-item">
+               <a href="<?= base_url('category') ?>" class="nav-link <?= ($title == "Product Categories" || $title == "Add|Product Categories" || $title == "Edit|Product Categories") ? "active" : ""; ?>">
+                 <i class="fas fa-list-ul nav-icon"></i>
+                 <p>Categories</p>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a href="<?= base_url('units') ?>" class="nav-link <?= ($title == "Product Units" || $title == "Add|Product Units" || $title == "Edit|Product Units") ? "active" : ""; ?>">
+                 <i class="fas fa-list-ul nav-icon"></i>
+                 <p>Units</p>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a href="<?= base_url('/items'); ?>" class="nav-link <?= ($title == "Product Items" || $title == "Add|Product Items" || $title == "Edit|Product Items") ? "active" : ""; ?>">
+                 <i class="fas fa-list-ul nav-icon"></i>
+                 <p>Items</p>
+               </a>
+             </li>
+           </ul>
+         </li>
+
          <li class="nav-header">SETTING</li>
          <li class="nav-item">
            <a href="#" class="nav-link">

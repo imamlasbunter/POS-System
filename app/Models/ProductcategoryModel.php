@@ -2,25 +2,22 @@
 
 namespace App\Models;
 
-use CodeIgniter\Database\MySQLi\Builder;
 use CodeIgniter\Model;
 
-class CustomersModel extends Model
+class ProductcategoryModel extends Model
 {
-	protected $table                = 'tbl_customers';
+	protected $table                = 'tbl_productcategories';
 	protected $primaryKey           = 'id';
 	protected $returnType           = 'array';
 	protected $allowedFields        = [
-		'name',
-		'no_telp',
-		'address',
+		'category',
 		'user_create',
 		'user_update',
 		'user_delete'
 	];
 
 	// Dates
-	protected $useTimestamps        = True;
+	protected $useTimestamps        = true;
 
 	public function search($keyword)
 	{
@@ -29,6 +26,6 @@ class CustomersModel extends Model
 		// return $builder;
 
 
-		return $this->table('tbl_customers')->like('name', $keyword)->orLike('address', $keyword)->orLike('no_telp', $keyword);
+		return $this->table('tbl_productcategories')->like('category', $keyword);
 	}
 }

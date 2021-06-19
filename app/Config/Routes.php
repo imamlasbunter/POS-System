@@ -51,13 +51,43 @@ $routes->group('suppliers', ['filter' => 'auth'], function ($routes) {
 });
 
 $routes->group('customers', ['filter' => 'auth'], function ($routes) {
-	//suppliers
+	//customers
 	$routes->get('/', 'Customers::index');
 	$routes->get('add', 'Customers::add');
 	$routes->post('add', 'Customers::save');
 	$routes->delete('delete/(:num)', 'Customers::delete/$1');
 	$routes->get('edit/(:num)', 'Customers::edit/$1');
 	$routes->post('edit/(:num)', 'Customers::update/$1');
+});
+
+$routes->group('category', ['filter' => 'auth'], function ($routes) {
+	//category
+	$routes->get('/', 'Category::index');
+	$routes->get('add', 'Category::add');
+	$routes->post('add', 'Category::save');
+	$routes->delete('delete/(:num)', 'Category::delete/$1');
+	$routes->get('edit/(:num)', 'Category::edit/$1');
+	$routes->post('edit/(:num)', 'Category::update/$1');
+});
+
+$routes->group('units', ['filter' => 'auth'], function ($routes) {
+	//category
+	$routes->get('/', 'Units::index');
+	$routes->get('add', 'Units::add');
+	$routes->post('add', 'Units::save');
+	$routes->delete('delete/(:num)', 'Units::delete/$1');
+	$routes->get('edit/(:num)', 'Units::edit/$1');
+	$routes->post('edit/(:num)', 'Units::update/$1');
+});
+
+$routes->group('items', ['filter' => 'auth'], function ($routes) {
+	//category
+	$routes->get('/', 'Items::index');
+	$routes->get('add', 'Items::add');
+	$routes->post('add', 'Items::save');
+	$routes->delete('delete/(:num)', 'Items::delete/$1');
+	$routes->get('edit/(:num)', 'Items::edit/$1');
+	$routes->post('edit/(:num)', 'Items::update/$1');
 });
 
 /*
